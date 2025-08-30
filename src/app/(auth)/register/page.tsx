@@ -7,7 +7,7 @@ import Input from "@/app/components/ui/Input";
 import Button from "@/app/components/ui/Button";
 
 export default function RegisterPage() {
-  const [form, setForm] = useState({ username: "", email: "", password: "", role_code: "user" as "user" | "admin" });
+  const [form, setForm] = useState({ username: "", name: "", email: "", password: "", role_code: "user" as "user" | "admin" | "staff" | "courier"});
   const [err, setErr] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();

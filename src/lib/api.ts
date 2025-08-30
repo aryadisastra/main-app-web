@@ -26,7 +26,7 @@ async function request<T>(url: string, options: RequestInit = {}): Promise<Envel
 }
 
 export const authApi = {
-  register(payload: { username: string; email: string; password: string; role_code: "admin" | "user" }) {
+  register(payload: { username: string; email: string; password: string; role_code: "admin" | "user" | "staff" | "courier" }) {
     return request(`${AUTH_BASE}/auth/register`, { method: "POST", body: JSON.stringify(payload) });
   },
   login(payload: { identifier: string; password: string }) {
